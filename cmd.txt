@@ -1,0 +1,9 @@
+php spark migrate:create create_task
+
+After adding fields in migration file.
+php spark migrate
+php spark migrate:rollback
+
+
+php spark migrate:create add_timestamp
+php spark migrate

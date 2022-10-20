@@ -6,10 +6,11 @@ class Tasks extends BaseController
 {
     public function index()
     {
-        $data = [
-            ['id'=>1,'desc'=>'First task'],
-            ['id'=>2,'desc'=>'Second task']
-        ];
+        $model = new \App\Models\TaskModel;
+        $data = $model->findAll();
+
+        // dd($data);
+
         return view("Tasks/index.php",['tasks'=>$data]);
     }
 }
