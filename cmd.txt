@@ -7,3 +7,7 @@ php spark migrate:rollback
 
 php spark migrate:create add_timestamp
 php spark migrate
+
+
+
+php spark migrate:create create_user

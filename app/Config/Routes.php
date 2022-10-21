@@ -52,6 +52,11 @@ $routes->post('/tasks/update/(:num)', 'Tasks::update/$1');
 $routes->get('/tasks/delete/(:num)', 'Tasks::delete/$1');
 $routes->post('/tasks/delete/(:num)', 'Tasks::delete/$1');
 
+// Sign up
+$routes->get('/signup/new', 'Signup::new');
+$routes->post('/signup/create', 'Signup::create');
+$routes->get('/signup/success', 'Signup::success');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
