@@ -48,6 +48,10 @@ $routes->post('/tasks/create', 'Tasks::create');
 $routes->get('/tasks/edit/(:num)', 'Tasks::edit/$1');
 $routes->post('/tasks/update/(:num)', 'Tasks::update/$1');
 
+// Delete
+$routes->get('/tasks/delete/(:num)', 'Tasks::delete/$1');
+$routes->post('/tasks/delete/(:num)', 'Tasks::delete/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

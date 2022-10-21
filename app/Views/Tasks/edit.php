@@ -22,14 +22,12 @@ Edit task
 
 <div class="container">
     <div class="row">
-    <?= form_open("tasks/update/".$task['id']) ?>
-  <div class="mb-3">
-    <label for="" class="form-label">Task description</label>
-    <input type="" name="description" class="form-control" id="" aria-describedby="" value="<?= old('description', esc($task['description'])) ?>">
-  </div>
+    <?= form_open("tasks/update/".$task->id) ?>
+
+    <?= $this->include('Tasks/form') ?>
 
   <button type="submit" class="btn btn-primary">Submit</button>
-  <a href="<?= site_url("tasks/show/".$task['id']) ?>">Cancel</a>
+  <a href="<?= site_url("tasks/show/".$task->id) ?>">Cancel</a>
 </form>
     </div>
 </div>

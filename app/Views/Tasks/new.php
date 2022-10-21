@@ -23,10 +23,9 @@ Task
 <div class="container">
     <div class="row">
     <?= form_open("tasks/create") ?>
-  <div class="mb-3">
-    <label for="" class="form-label">Task description</label>
-    <input type="" name="description" class="form-control" id="" aria-describedby="">
-  </div>
+
+
+    <?= $this->include('Tasks/form') ?>
 
   <button type="submit" class="btn btn-primary">Submit</button>
   <a href="<?= site_url("tasks/") ?>">Cancel</a>
