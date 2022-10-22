@@ -57,6 +57,14 @@ $routes->get('/signup/new', 'Signup::new');
 $routes->post('/signup/create', 'Signup::create');
 $routes->get('/signup/success', 'Signup::success');
 
+// Log in
+$routes->get('/login', 'Login::new');
+$routes->post('/login/create', 'Login::create');
+
+// Log out
+$routes->get('/logout', 'Login::logout');
+$routes->get('login/logoutMessage', 'Login::logoutMessage');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
