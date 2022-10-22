@@ -11,7 +11,7 @@ Home
 <a href="<?= site_url("signup/new")   ?>">Sign up</a>
 
 
-<?php if(session()->has('user_id_session')): ?>
+<?php if(current_user()): ?>
     <p>User is logged in</p>
     <p>Hello <?= esc(current_user()->name) ?></p>
     <a href="<?= site_url("logout")   ?>">Log out</a>
