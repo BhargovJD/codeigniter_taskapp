@@ -14,7 +14,6 @@ class Tasks extends BaseController
     public function index()
     {
 
-
         $data = $this->model->findAll();
 
         // dd($data);

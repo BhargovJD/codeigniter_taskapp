@@ -53,12 +53,12 @@ $routes->get('/tasks/delete/(:num)', 'Tasks::delete/$1');
 $routes->post('/tasks/delete/(:num)', 'Tasks::delete/$1');
 
 // Sign up
-$routes->get('/signup/new', 'Signup::new');
+$routes->get('/signup/new', 'Signup::new',['filter' => 'guest']);
 $routes->post('/signup/create', 'Signup::create');
 $routes->get('/signup/success', 'Signup::success');
 
 // Log in
-$routes->get('/login', 'Login::new');
+$routes->get('/login', 'Login::new',['filter' => 'guest']);
 $routes->post('/login/create', 'Login::create');
 
 // Log out

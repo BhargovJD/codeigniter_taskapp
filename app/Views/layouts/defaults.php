@@ -10,6 +10,20 @@
   </head>
 <body>
 
+<a href="<?= site_url("")   ?>">Home</a>
+
+<?php if(current_user()): ?>
+    <!-- <p>User is logged in</p> -->
+    <p>Hello <?= esc(current_user()->name) ?></p>
+    <a href="<?= site_url("tasks")   ?>">Tasks</a>
+    <a href="<?= site_url("logout")   ?>">Log out</a>
+<?php else: ?>
+    <!-- <p>User is not logged in</p> -->
+    <a href="<?= site_url("signup/new")   ?>">Sign up</a>
+    <a href="<?= site_url("login")   ?>">Log in</a>
+<?php endif ?>
+
+
 <?php if (session()->has('warning')): ?>
   <div class="warning">
     <?= session('warning') ?>
