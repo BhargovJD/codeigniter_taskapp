@@ -65,6 +65,22 @@ $routes->post('/login/create', 'Login::create');
 $routes->get('/logout', 'Login::logout');
 $routes->get('login/logoutMessage', 'Login::logoutMessage');
 
+// Admin show users
+$routes->get('/admin/users', 'Admin\Users::index');
+$routes->get('/admin/users/show/(:num)', 'Admin\Users::show/$1');
+// Admin create user view
+$routes->get('/admin/users/new', 'Admin\Users::new');
+// Admin create user
+$routes->post('/admin/users/create', 'Admin\Users::create');
+// Admin edit user view
+$routes->get('/admin/users/edit/(:num)', 'Admin\Users::edit/$1');
+// Admin update user
+$routes->post('/admin/users/update/(:num)', 'Admin\Users::update/$1');
+// Admin delete user view
+$routes->get('/admin/users/delete/(:num)', 'Admin\Users::delete/$1');
+// Admin delete user delete
+$routes->post('/admin/users/delete/(:num)', 'Admin\Users::delete/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

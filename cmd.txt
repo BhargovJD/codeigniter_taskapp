@@ -14,3 +14,13 @@ php spark migrate:create create_user
 
 php spark migrate:create add_user_id_to_task
 php spark migrate
+
+
+//Links
+https://localhost/taskapp/
+
+https://localhost/taskapp/tasks
+
+https://localhost/taskapp/admin/users
+
+https://localhost/taskapp/admin/users
